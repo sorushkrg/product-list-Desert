@@ -1,0 +1,169 @@
+.container{
+    max-width: 1100px;
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.container .payment{
+    max-width: 310px;
+    height: calc( 100vh - 4rem );
+}
+.container .box-food{
+    flex-grow: 1;
+    height: calc(170vh - 4rem);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+/* Payment design */
+.container .payment .payment-cart{
+    max-width: 305px;
+    width: 100%;
+    height: 300px;
+    padding: 0.9rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: hsl(14, 86%, 42%);
+    border-radius: 10px;
+}
+.container .payment .payment-cart .payment-cake{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: hsl(14, 25%, 72%);
+    font-weight: 800;
+}
+/* Food-box design */
+.container .box-food .food{
+    display: flex; 
+    gap: 20px;
+    justify-content: center;
+}
+.container .box-food .food .food-card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.container .box-food .food .food-image{
+    width: 250px;
+    margin: 0 0 1.5rem 0;
+    position: relative;
+}
+.container .box-food .food .food-pargraf{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.container .box-food .food .food-image img{
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.container .box-food .food .food-image img:hover{
+    transform: scale(1.1);
+}
+.container .box-food .food .food-image button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 30px;
+    padding: 10px 16px;
+    position: absolute;
+    left: calc(50% - 55px);
+    bottom: -8px;
+    border: 1px solid rgba(128, 128, 128, 0.472);
+    transition: 0.6s;
+}
+.container .box-food .food .food-image button:hover{
+    background-color: hsl(14, 86%, 42%);
+    path{
+        fill: #ffffff;
+    }
+}
+.container .box-food .food .food-card span{
+    color: grey;
+    font-weight: 400;
+}
+.container .box-food .food .food-card h3{
+    color: black;
+    font-weight: 800;
+}
+.container .box-food .food .food-card p{
+    color: hsl(14, 86%, 42%);
+    font-weight: 800;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+    .container .box-food {
+        height: auto;
+    }
+    .container .payment {
+        max-width: 450px;
+        width: 100%;
+        height: auto;
+        margin-left: 130px;
+        
+    }
+}
+
+@media (max-width: 992px) {
+    /* .container .box-food .food {
+        flex-direction: column;
+        align-items: center;
+    } */
+    .container .box-food .food .food-image {
+        min-width: 200px;
+        aspect-ratio: 2.5/1.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    .container .box-food .food {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .payment .payment-cart {
+        padding: 0.5rem;
+    }
+    .container .box-food .food .food-image {
+        min-width: 350px;
+        aspect-ratio: 2.5/1.5;
+    }
+}
+
+@media (max-width: 576px) {
+    .container .box-food .food {
+        align-items:center;
+        gap: 10px;
+        
+        
+        
+    }
+    /* .container .box-food{
+        margin-left: 50px;
+    } */
+    .container .box-food .food .food-image {
+        min-width: 350px;
+        aspect-ratio: 2.5/1.5;
+        
+    }
+    .container .box-food .food .food-pargraf {
+        gap: 5px;
+    }
+    .container{
+        align-items: center;
+    }
+}

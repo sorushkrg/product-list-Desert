@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fcf8f5;
+    font-family: "redhat";
+}
+@font-face {
+    font-family: "redhat";
+    src: url(/public/font/RedHatText-Regular.ttf);
+}
